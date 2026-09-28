@@ -26,3 +26,5 @@ CS418 Intro to Data Science Project on F1
 - [DHL Fastest Pitstop API](https://inmotion.dhl/en/formula-1/fastest-pit-stop-award): data for pitstop times, requires reddit community's reverse engineering of API
 - https://github.com/toUpperCase78/formula1-datasets
 
+## Datashape
+- The dataset contains 14 CSV files with different shapes, including 1,172 rows × 18 columns for races, 27,568 rows × 18 columns for race results, and 883,003 rows × 6 columns for lap times. Each file represents a different aspect of Formula 1, such as drivers, teams, circuits, and race performance, and the tables are connected through shared IDs.
