@@ -23,6 +23,48 @@ The notebook prints the shape, `info()` output, null counts, and `describe()` ou
 | Incomplete joins | 6 qualifying/results matches; 8 results/standings matches | Used inner joins and showed the join sizes. |
 | Exact duplicates | 0 | No rows removed. |
 
+## 7. OpenF1 API exploration
+
+OpenF1 has 18 endpoints. Historical data is free, needs no key, and comes as JSON or CSV. The free tier allows 3 requests/second and 30 requests/minute. Endpoint details are from the API docs; plot findings are from `eda.ipynb`.
+
+## Endpoints
+
+| Topic | Endpoint | What it provides |
+| --- | --- | --- |
+| Calendar | `meetings`, `sessions` | Race weekends and their sessions, with circuit, country, dates, cancelled flag |
+| Drivers / teams | `drivers`, `championship_teams` (beta) | Driver name and number, `team_name` per session; team points and position |
+| Results / positions | `session_result`, `starting_grid`, `position` | Final results with DNF/DNS/DSQ, grid positions, in-race position changes over time |
+| Pit stops | `pit`, `stints` | Lap, `lane_duration`, `stop_duration`; tyre compound and stint laps |
+| Weather | `weather` | Air and track temperature, humidity, wind, rainfall, updated every minute per session |
+| Race control | `race_control` | Flags, safety car, session status, incident messages |
+
+## Join keys
+
+- `meeting_key` (weekend) → `session_key` (qualifying, race, etc.) → `driver_number`.
+- Driver-level endpoints join on `session_key` + `driver_number`. Teams come from `drivers.team_name`, because `pit` has no team column.
+- `weather` and `race_control` join on `session_key`, then align by `date` or `lap_number`.
+- `circuit_key` links the same circuit across years.
+- There is no `raceId`, so linking to the Kaggle data means matching on year, circuit and date.
+
+## Data-quality issues
+
+- Coverage starts in 2023**, so OpenF1 cannot cover our full 2015–2026 window.
+- `stop_duration` only exists from the 2024 US GP.** Earlier stops only have `lane_duration`, which is not comparable.
+- `driver_number` is per season**, so never join on it without `session_key`.
+- `team_name` is free text**, so rebrands may split a team. Check before grouping.
+- `position` is a time series.** Use `session_result` for final results.
+- Mixed types:** `session_result.duration` is an array in qualifying, and `gap_to_leader` can be `+N LAP(S)`.
+- Deprecated fields:** `pit_duration` and `country_code` go away at the end of 2026.
+- Sparse or beta data:** `team_radio` is mostly empty in 2026, `overtakes` is incomplete, and championship endpoints are beta.
+
+## Exploratory plots
+
+The notebook plots sessions per season, pit stop coverage per race (including the share with `stop_duration`), track temperature and rainfall per race, and safety car and red flag counts per race.
+
+Findings: _fill in after running._
+
+Takeaway: OpenF1 works for 2023+ pit-stop, weather and race-event analysis, but not the full 2015–2026 window.
+
 ## 3. Distributions
 
 The notebook includes plots for qualifying position, classified finishing position, fastest-lap speed, and positions gained/lost from qualifying.
