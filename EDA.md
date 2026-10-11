@@ -65,6 +65,57 @@ Findings: _fill in after running._
 
 Takeaway: OpenF1 works for 2023+ pit-stop, weather and race-event analysis, but not the full 2015–2026 window.
 
+# FastF1 Data Exploration
+
+We pulled sample data from the **2023 Bahrain Grand Prix** using the FastF1 API which explores available fields (lap, qualifying, weather, tyre, session), profiles each dataset, checks for missing and inconsistent values, and generates distribution plots for lap times, and tyre compounds. We also turned telemetry off because high-frequency sensor streams add 50–150 MB per session.
+
+## Explored Field Categories:
+
+| Category | Source | Key Fields Extracted |
+| :--- | :--- | :--- |
+| **Laps & Pace** | `session.laps` | Lap & sector times (S1–S3), speed traps, `IsAccurate`, track status |
+| **Tyres & Stints** | `session.laps` | Compound (Soft/Med/Hard), `TyreLife`, `Stint`, `FreshTyre` |
+| **Qualifying** | `session_q.results` | Grid `Position`, Q1–Q3 times, driver & team metadata |
+| **Weather** | `session.weather_data` | Air/track temp, humidity, pressure, wind, rainfall |
+| **Session Info** | `session` / `.event` | Event name, round, year, session type, total laps |
+
+---
+
+## Dataset Analysis
+
+| Dataset | Shape | Data Types & Schema | Missing / Null Values | Key Statistics & Observations |
+| :--- | :---: | :--- | :--- | :--- |
+| **Lap Data** | `(1056, 31)` | `timedelta64[ns]` (timings), `float64` (stints, tyre life, speeds), `object`, `bool` | `PitIn`/`Out` (>96% non-pits), `LapTime` (1.0%), `Sector3` (0.8%) | Tyre life: 1–24 laps (mean 8.8). Timings retain sub-ms precision; require conversion to seconds via `.dt.total_seconds()`. |
+| **Qualifying Data** | `(20, 22)` | `timedelta64[ns]` (`Q1`–`Q3`), `float64` (`Position`), `object` (driver/team metadata) | `Q1`: 0%, `Q2`: 25% (5 drivers), `Q3`: 50% (10 drivers) | Missing values are structural (3-stage knockout format). Q1 fast: 1:31.295; Pole lap: 1:29.708 (Verstappen). |
+| **Weather Data** | `(161, 8)` | `float64` (temps, humidity, wind), `int64` (direction), `bool` (`Rainfall`), `timedelta64[ns]` | **0 nulls** (100% complete) | Logged ~1 min intervals. Track temp: 28.3–34.4°C (mean 31.5°C), Air temp: ~26.8°C, Rainfall: 100% dry. |
+
+
+---
+
+## Missing & Inconsistent Values (Anomalies Audit)
+
+| Anomaly / Issue | Nature & Cause | Affected Rows | Resolution |
+| :--- | :--- | :---: | :--- |
+| **Exact Duplicates** | Identical rows across lap, qualifying, or weather tables | 0 rows | Confirmed clean; no deduplication needed. |
+| **Missing `LapTime`** | Driver retired mid-lap before crossing the timing beam (e.g., Leclerc lap 39 engine failure) | 11 laps (1.0%) | **Flagged & Dropped** for pace analysis; kept in session logs to track retirement laps. |
+| **Pit-In Laps (in-laps)** | Laps restricted by pit-lane speed limiter (80 km/h) + stationary stop time | 38 in-laps | **Filtered**: Excluded using `PitInTime.isna()`. These laps distort pace (115s–135s vs normal ~97s). |
+| **Pit-Out Laps (out-laps)** | Laps exiting pit box under speed limiter onto track | 37 out-laps | **Filtered**: Excluded using `PitOutTime.isna()`. Out-laps distort representative flying pace. |
+| **Safety Car Laps** | Neutralized laps under caution / yellow flags | 41 laps (3.9%) | **Flagged & Excluded**: Filtered out to avoid artificially inflated lap times from caution periods. |
+
+## Distribution Plots
+
+### A. Lap Times Distribution
+- **All Lap Times (Raw with In/Out Laps):** Shows a heavily right-skewed, multimodal distribution with extreme outliers (115s to 145s) caused by pit stops, out-laps, and caution periods.
+
+### B. Tyre Compound Distribution
+- **Observations:**
+  - Hard tyres accounted for over half of all laps due to high thermal degradation on Bahrain's abrasive tarmac during long middle and final stints.
+  - Soft tyres were primarily used in opening stints for start-line traction.
+  - Medium tyres saw minimal adoption because the Hard compound provided superior durability without a major pace penalty.
+
+**Takeaway**: FastF1 provides high-resolution lap, tyre, and weather data, but representative pace analysis requires strict filtering of pit in/out laps, caution periods, and timedelta conversion before modeling.
+
+
 ## 3. Distributions
 
 The notebook includes plots for qualifying position, classified finishing position, fastest-lap speed, and positions gained/lost from qualifying.
