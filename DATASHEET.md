@@ -229,3 +229,36 @@ The repository currently produces several exploratory dataframes, not one final 
 | OpenF1 | [API documentation](https://openf1.org/docs/) and base URL `https://api.openf1.org/v1` | Documentation checked October 28, 2026; live query results are not versioned | JSON or CSV; uses `meeting_key`, `session_key`, and `driver_number` | Stated for education, learning, research, and non-commercial fan use; no ownership claim over underlying F1 data. Share code and citation, not a claim of ownership over an export. |
 | Kaggle/Ergast-derived data | [Kaggle dataset](https://www.kaggle.com/datasets/jtrotman/formula-1-race-data) | Download notebook output reflects the version available when it was run; exact access date/version not saved | CSV relational tables with race, driver, and constructor IDs | Exact dataset license was not verifiable from the repository. Reuse must follow the license shown on the Kaggle page at download time. |
 | FastF1 | [FastF1 documentation](https://docs.fastf1.dev/) and [GitHub repository](https://github.com/theOehrly/Fast-F1) | Notebook output reports FastF1 3.8.3; Bahrain 2023 sessions | Python/pandas objects with documented lap and session fields | FastF1 code/docs are MIT; underlying timing-data rights are separate and not documented as MIT. Share code, not a claim that the timing data are ours. |
+
+---
+
+## 6. People, representation, and possible harm
+
+These datasets describe people even though they are mostly performance records. Drivers are named directly. Pit crews are represented indirectly through team-level stop times, while individual crew members are left unnamed. Engineers, strategists, reserve drivers, mechanics outside the active stop crew, and other workers who affect performance are mostly invisible.
+
+This creates a representation problem: a team's stop time can look like a direct measure of worker quality even though it also depends on equipment, pit-lane traffic, the driver's positioning, damage, penalties, safety procedures, and strategy. Slow or unusual stops may be necessary and should not automatically be treated as mistakes. Retirements and missing records can also make certain drivers or teams appear worse if context is ignored.
+
+The data cover Formula One, an unusually well-funded and internationally visible racing series. They do not represent pit crews in Formula 2, Formula 3, women's racing series, regional series, or less-funded motorsport. Findings should not be generalized to those groups.
+
+Using the CARE principles as a lens:
+
+- **Collective benefit:** The project can help fans and students understand teamwork and strategy, but it should not be used to rank or target individual workers.
+- **Authority to control:** Teams, drivers, and crews did not contribute to this student project or control our interpretation. The publishers do not document consent for this reuse.
+- **Responsibility:** We need to explain timing definitions, missing periods, and race context instead of reducing a team to one number.
+- **Ethics:** Results should remain descriptive. We should avoid claims about competence, employment decisions, or blame based only on pit-stop rankings.
+
+No Indigenous identity or community data are recorded in these tables. Still, CARE is useful because it reminds us that publicly visible performance data concern real people and organizations, not just rows in a dataframe.
+
+---
+
+## References
+
+- Timnit Gebru et al., [“Datasheets for Datasets”](https://doi.org/10.1145/3458723), 2021.
+- Sam Lau, Joey Gonzalez, and Deb Nolan, [*Learning Data Science*, Chapter 2](https://learningds.org/ch/02/data_scope_intro.html).
+- Mark D. Wilkinson et al., [“The FAIR Guiding Principles”](https://doi.org/10.1038/sdata.2016.18), 2016.
+- Stephanie Russo Carroll et al., [“The CARE Principles for Indigenous Data Governance”](https://doi.org/10.5334/dsj-2020-043), 2020.
+- Shannon E. Ellis and Jeffrey T. Leek, [“How to Share Data for Collaboration”](https://doi.org/10.1080/00031305.2017.1375987), 2018.
+- [DHL Fastest Pit Stop Award](https://inmotion.dhl/en/formula-1/fastest-pit-stop-award).
+- [`f1pits` documentation](https://github.com/Jordan-Soria/f1pits).
+- [OpenF1 API documentation](https://openf1.org/docs/).
+- [FastF1 documentation](https://docs.fastf1.dev/).
