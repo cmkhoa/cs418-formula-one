@@ -41,3 +41,14 @@ The larger source dataset has related tables for races, results, lap times, driv
 We found no exact duplicates or CSV nulls. The main issue is that `results.csv` uses `\N` in 5 rows (12 cells), so the notebook changes those values to missing only in an analysis copy. We also found one grid/qualifying mismatch and incomplete joins between the sample files.
 
 The plots look at qualifying vs. finish position, grid vs. finish position, fastest-lap speed vs. finish position, and results vs. standings. Since the files only have 10 rows each, these are just starting observations. We need the full data before making claims about teams, circuits, pit stops, weather, or rule changes.
+
+## Data documentation
+
+Our full data documentation is in [`DATASHEET.md`](DATASHEET.md). It includes the datasheets, research-question scope, codebook, rebuilding recipe, access and reuse notes, and discussion of the people represented by the data.
+
+- **DHL Fastest Pit Stop Award data:** [official DHL page](https://inmotion.dhl/en/formula-1/fastest-pit-stop-award), accessed through the [`Jordan-Soria/PitStops`](https://github.com/Jordan-Soria/PitStops) mirror. No license is stated for the mirror or the underlying tables.
+- **OpenF1:** [OpenF1 API](https://openf1.org/docs/). OpenF1 permits historical access for educational, research, personal-learning, and non-commercial fan projects, but does not claim ownership of the underlying Formula One data.
+- **Formula 1 Race Data:** [Kaggle/Ergast-derived dataset](https://www.kaggle.com/datasets/jtrotman/formula-1-race-data). The exact Kaggle license was not recorded in the repository and must be checked on the dataset page before redistribution.
+- **FastF1:** [FastF1](https://docs.fastf1.dev/) is used as a one-race exploratory and validation source. Its software is MIT-licensed; that license does not automatically cover the underlying timing data.
+
+The biggest limitation is that the repository does not yet contain a finished join between pit stops and race outcomes. The saved DHL data cover only the 2023 Bahrain Grand Prix, while the broader OpenF1 and FastF1 pulls are not stored as versioned data files, so we cannot yet make season-wide or causal claims.
