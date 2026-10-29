@@ -199,3 +199,33 @@ The codebook includes every raw or derived column currently used by [`eda.ipynb`
 | `fastestLapSpeed` | float | km/h | Average speed on the driver's fastest lap | 212.974–218.385 | Literal `\N` upstream / `NaN` after cleaning | `results.csv` |
 | `position` in standings | integer | rank | Driver championship position after the race | 1–8 | None | `driver_standings.csv` |
 | `position_change` | integer | places | Qualifying position minus finishing order; positive means places gained | -7 to 4 among six matched rows | Missing if no join match | Derived in `eda.ipynb` |
+
+## 4. Reproducible recipe
+
+The repository currently produces several exploratory dataframes, not one final analysis dataframe. These are the steps the code actually performs.
+
+1. Run [`data_acquisition.ipynb`](data_acquisition.ipynb) to download `jtrotman/formula-1-race-data` with `kagglehub`. The notebook then expects the qualifying, results, and driver-standings files under `data/`. The copy from the Kaggle cache into `data/` is not automated, so this is a current reproducibility gap.
+2. In [`eda.ipynb`](eda.ipynb), load the three 10-row CSV files from `sample_data/`. These committed samples allow the early race-result checks to run without the full Kaggle download.
+3. Check shapes, data types, missing values, summary statistics, and exact duplicates. No exact duplicate rows are found in the three samples.
+4. In the results analysis copy, replace literal `\N` values with `pd.NA` and convert `milliseconds` to `milliseconds_numeric` with `pd.to_numeric(errors="coerce")`. The source CSV is not edited.
+5. Join qualifying to results with an inner join on `raceId`, `driverId`, and `constructorId`. Of 10 qualifying and 10 result rows, **6 match, 4 qualifying rows do not match, and 4 result rows do not match**.
+6. Derive `position_change = position_qual - positionOrder` for the six matched rows.
+7. Join results to driver standings with an inner join on `raceId` and `driverId`. Of 10 result and 10 standings rows, **8 match, 2 result rows do not match, and 2 standings rows do not match**.
+8. For OpenF1, call `sessions` for 2023, 2024, 2025, and 2026. Keep rows where `session_name == "Race"` and `is_cancelled == False`. Add `label = year + circuit_short_name`.
+9. For each retained OpenF1 race, request `pit`, `weather`, and `race_control` using `session_key`. The helper waits 2.1 seconds between calls and retries HTTP 429 responses. Add `rain = rainfall > 0`. The responses are not saved, so row counts must be recorded during the next successful run.
+10. For FastF1, load the 2023 Bahrain race and qualifying sessions with telemetry disabled. Copy laps, race results, weather, and qualifying results into dataframes.
+11. Derive `LapTimeSeconds`. Create `clean_laps` by keeping rows where `IsAccurate` is true, `TrackStatus == "1"`, pit-in and pit-out times are missing, and lap time is present. The notebook reports 889 of 1,056 laps retained.
+12. Load the two committed DHL TSV samples with `read_dhl`. Use tab separation, strip whitespace, and convert `Pos.`, `Time (sec)`, `Lap`, and `Points` to numeric types. No rows are dropped from the saved Bahrain sample.
+13. For the broader DHL coverage check, list `.csv` files in the mirror's 2018–2026 year folders, download them to `dhl_cache/`, parse year and round from their paths, and combine them. Malformed rows are skipped only after a strict parse raises an error. The cache and combined dataframe are not committed.
+14. **No join currently connects DHL or OpenF1 pit stops to the Kaggle race results.** Therefore, there are no honest matched/unmatched counts for that planned join. Before the final analysis, we need to define a stable race key (season, round/circuit, and date), a driver/team name crosswalk, save the joined table, and report both matched and unmatched counts.
+
+---
+
+## 5. Access, reuse, and FAIR checklist
+
+| Dataset | Findable: persistent source | Accessible: version/date | Interoperable: format and identifiers | Reusable: license or terms and our decision |
+| --- | --- | --- | --- | --- |
+| DHL mirror | [`Jordan-Soria/PitStops`](https://github.com/Jordan-Soria/PitStops); official [DHL award page](https://inmotion.dhl/en/formula-1/fastest-pit-stop-award) | Accessed October 28, 2026; exact mirror commit was not recorded | Tab-separated text; team and driver names are free text; year/round come from paths | No license is stated for the mirror or table data. We will not claim unrestricted redistribution rights for a processed full copy. |
+| OpenF1 | [API documentation](https://openf1.org/docs/) and base URL `https://api.openf1.org/v1` | Documentation checked October 28, 2026; live query results are not versioned | JSON or CSV; uses `meeting_key`, `session_key`, and `driver_number` | Stated for education, learning, research, and non-commercial fan use; no ownership claim over underlying F1 data. Share code and citation, not a claim of ownership over an export. |
+| Kaggle/Ergast-derived data | [Kaggle dataset](https://www.kaggle.com/datasets/jtrotman/formula-1-race-data) | Download notebook output reflects the version available when it was run; exact access date/version not saved | CSV relational tables with race, driver, and constructor IDs | Exact dataset license was not verifiable from the repository. Reuse must follow the license shown on the Kaggle page at download time. |
+| FastF1 | [FastF1 documentation](https://docs.fastf1.dev/) and [GitHub repository](https://github.com/theOehrly/Fast-F1) | Notebook output reports FastF1 3.8.3; Bahrain 2023 sessions | Python/pandas objects with documented lap and session fields | FastF1 code/docs are MIT; underlying timing-data rights are separate and not documented as MIT. Share code, not a claim that the timing data are ours. |
