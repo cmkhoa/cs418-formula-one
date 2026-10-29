@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xparse}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\newlength{\NFwidth}
+\setlength{\NFwidth}{4.5in}
+\NewDocumentCommand{\NFelement}{mmm}{\normalsize\textbf{#1} #2\hfill #3}
+\NewDocumentCommand{\NFline}{O{l}m}{\footnotesize\makebox[\NFwidth][#1]{#2}}
+\NewDocumentCommand{\NFtext}{+m}{\parbox{\NFwidth}{\raggedright #1}}
+\newcommand{\NFtitle}{\multicolumn{1}{c}{\huge\bfseries Dataset Facts}}
+\newcommand{\NFRULE}{\midrule[5pt]}
+\newcommand{\NFRule}{\midrule[2pt]}
+\newcommand{\NFrule}{\midrule}
+
+\title{DHL Pit Stop Dataset Card}
+\author{CS 418 Formula One Project}
+\date{October 28, 2026}
+
+\begin{document}
+\begin{figure}[ht]
+\centering
+\resizebox{11cm}{!}{%
+\begin{tabular}{@{}p{\NFwidth}@{}}
+\NFtitle \\
+\NFRULE
+\NFelement{Dataset}{DHL Fastest Pit Stop Award}{Primary} \\
+\NFRule
+\NFtext{\textbf{Project use}\\Primary source of stationary pit-stop times for our Formula One pit-stop analysis.} \\
+\NFrule
+\NFtext{\textbf{Source}\\The \href{https://inmotion.dhl/en/formula-1/fastest-pit-stop-award}{official DHL award page}, accessed through the \href{https://github.com/Jordan-Soria/PitStops}{Jordan-Soria/PitStops mirror}.} \\
+\NFrule
+\NFelement{Saved race data}{52 rows}{6 columns} \\
+\NFline{2023 Bahrain Grand Prix} \\
+\NFelement{Saved standings}{10 rows}{3 columns} \\
+\NFline{2023 team standings} \\
+\NFrule
+\NFtext{\textbf{One row represents}\\One ranked stop by one driver in the race file, or one team's season standing in the championship file.} \\
+\NFrule
+\NFelement{Teams}{10}{Bahrain sample} \\
+\NFelement{Drivers}{20}{Bahrain sample} \\
+\NFelement{Stop-time range}{2.22--42.57}{seconds} \\
+\NFelement{Exact duplicates}{0}{rows} \\
+\NFelement{Empty cells}{0}{cells} \\
+\NFrule
+\NFtext{\textbf{Fields}\\Rank, team, driver, stationary stop time, lap, and DHL award points. The related documentation says sprint stops are excluded.} \\
+\NFrule
+\NFtext{\textbf{Preprocessing}\\Read as tab-separated text, strip whitespace, and convert rank, time, lap, and points to numeric values. Raw samples stay unchanged.} \\
+\NFrule
+\NFtext{\textbf{Unusual value}\\At least one row has lap 0. Its meaning is not documented, so we do not reinterpret it.} \\
+\NFrule
+\NFtext{\textbf{Appropriate uses}\\Describing recorded stop times, comparing recorded team performance, and studying DHL award points.} \\
+\NFrule
+\NFtext{\textbf{Do not use for}\\Causal claims, individual crew evaluations, or total pit-lane time. Stationary time does not include all time lost entering and leaving the lane.} \\
+\NFrule
+\NFtext{\textbf{License and reuse}\\No license is stated for the mirror or underlying tables. We share code but do not claim unrestricted redistribution rights.} \\
+\NFrule
+\NFtext{\textbf{Biggest limitation}\\Only Bahrain 2023 and the 2023 standings are saved. Pit stops are not yet joined to race results.} \\
+\NFRULE
+\NFtext{\footnotesize Sources and repository files checked October 28, 2026. See \texttt{DATASHEET.md} for full documentation.} \\
+\end{tabular}%
+}
+\caption{Nutrition-style summary of the DHL pit-stop data used in this project.}
+\end{figure}
+\end{document}
+

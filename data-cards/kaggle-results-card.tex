@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xparse}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\newlength{\NFwidth}
+\setlength{\NFwidth}{4.5in}
+\NewDocumentCommand{\NFelement}{mmm}{\normalsize\textbf{#1} #2\hfill #3}
+\NewDocumentCommand{\NFline}{O{l}m}{\footnotesize\makebox[\NFwidth][#1]{#2}}
+\NewDocumentCommand{\NFtext}{+m}{\parbox{\NFwidth}{\raggedright #1}}
+\newcommand{\NFtitle}{\multicolumn{1}{c}{\huge\bfseries Dataset Facts}}
+\newcommand{\NFRULE}{\midrule[5pt]}
+\newcommand{\NFRule}{\midrule[2pt]}
+\newcommand{\NFrule}{\midrule}
+
+\title{Formula One Race Results Dataset Card}
+\author{CS 418 Formula One Project}
+\date{October 28, 2026}
+
+\begin{document}
+\begin{figure}[ht]
+\centering
+\resizebox{11cm}{!}{%
+\begin{tabular}{@{}p{\NFwidth}@{}}
+\NFtitle \\
+\NFRULE
+\NFelement{Dataset}{Kaggle Formula 1 Race Data}{Secondary} \\
+\NFRule
+\NFtext{\textbf{Project use}\\Supporting qualifying positions, race outcomes, points, and driver standings.} \\
+\NFrule
+\NFtext{\textbf{Source}\\\href{https://www.kaggle.com/datasets/jtrotman/formula-1-race-data}{jtrotman/formula-1-race-data}, an Ergast-derived relational dataset.} \\
+\NFrule
+\NFelement{Saved qualifying}{10 rows}{9 columns} \\
+\NFelement{Saved results}{10 rows}{18 columns} \\
+\NFelement{Saved standings}{10 rows}{7 columns} \\
+\NFrule
+\NFtext{\textbf{One row represents}\\One driver's qualifying result, race result, or championship standing after a race, depending on the table.} \\
+\NFrule
+\NFtext{\textbf{Join 1}\\Qualifying to results on \texttt{raceId}, \texttt{driverId}, and \texttt{constructorId}: 6 matches and 4 unmatched rows on each side.} \\
+\NFrule
+\NFtext{\textbf{Join 2}\\Results to standings on \texttt{raceId} and \texttt{driverId}: 8 matches and 2 unmatched rows on each side.} \\
+\NFrule
+\NFtext{\textbf{Preprocessing}\\Replace literal \texttt{\textbackslash N} placeholders in an analysis copy and coerce numeric fields when needed. Raw files stay unchanged.} \\
+\NFrule
+\NFtext{\textbf{Appropriate uses}\\Supporting descriptive comparisons between qualifying, finishing order, points, and standings.} \\
+\NFrule
+\NFtext{\textbf{Do not use for}\\Pit-stop measurement, telemetry analysis, or broad conclusions from the three 10-row samples.} \\
+\NFrule
+\NFtext{\textbf{License and reuse}\\The exact Kaggle license was not recorded in this repository. Users must check the dataset page before redistributing the data.} \\
+\NFrule
+\NFtext{\textbf{Biggest limitation}\\The committed files are small samples and have not been joined to the DHL or OpenF1 pit-stop data.} \\
+\NFRULE
+\NFtext{\footnotesize Repository files and notebook output checked October 28, 2026. See \texttt{DATASHEET.md} for full documentation.} \\
+\end{tabular}%
+}
+\caption{Nutrition-style summary of the race-results data used in this project.}
+\end{figure}
+\end{document}
+

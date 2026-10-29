@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xparse}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\newlength{\NFwidth}
+\setlength{\NFwidth}{4.5in}
+\NewDocumentCommand{\NFelement}{mmm}{\normalsize\textbf{#1} #2\hfill #3}
+\NewDocumentCommand{\NFline}{O{l}m}{\footnotesize\makebox[\NFwidth][#1]{#2}}
+\NewDocumentCommand{\NFtext}{+m}{\parbox{\NFwidth}{\raggedright #1}}
+\newcommand{\NFtitle}{\multicolumn{1}{c}{\huge\bfseries Dataset Facts}}
+\newcommand{\NFRULE}{\midrule[5pt]}
+\newcommand{\NFRule}{\midrule[2pt]}
+\newcommand{\NFrule}{\midrule}
+
+\title{FastF1 Dataset Card}
+\author{CS 418 Formula One Project}
+\date{October 28, 2026}
+
+\begin{document}
+\begin{figure}[ht]
+\centering
+\resizebox{11cm}{!}{%
+\begin{tabular}{@{}p{\NFwidth}@{}}
+\NFtitle \\
+\NFRULE
+\NFelement{Dataset}{FastF1 Bahrain 2023}{Validation} \\
+\NFRule
+\NFtext{\textbf{Project use}\\One-race exploration of laps, pit entries and exits, tyres, qualifying, and weather.} \\
+\NFrule
+\NFtext{\textbf{Source}\\\href{https://docs.fastf1.dev/}{FastF1}, an unofficial Python package for Formula One timing and telemetry.} \\
+\NFrule
+\NFelement{Race laps}{1,056 rows}{31 columns} \\
+\NFelement{Qualifying}{20 rows}{22 columns} \\
+\NFelement{Weather}{161 rows}{8 columns} \\
+\NFelement{Coverage}{Bahrain 2023}{one race} \\
+\NFrule
+\NFtext{\textbf{One row represents}\\One driver lap, one driver's qualifying result, or one weather reading, depending on the table.} \\
+\NFrule
+\NFelement{Missing lap times}{1}{lap} \\
+\NFelement{Pit-in laps}{52}{laps} \\
+\NFelement{Pit-out laps}{50}{laps} \\
+\NFelement{Clean laps retained}{889}{84.2\%} \\
+\NFrule
+\NFtext{\textbf{Clean-lap filter}\\Keep accurate laps with track status 1, a recorded lap time, and no pit entry or exit.} \\
+\NFrule
+\NFtext{\textbf{Appropriate uses}\\Checking lap-level structure, validating the Bahrain pit-stop count, and exploring tyre or weather fields.} \\
+\NFrule
+\NFtext{\textbf{Do not use for}\\Season-level conclusions or claims that one race represents all teams, circuits, and conditions.} \\
+\NFrule
+\NFtext{\textbf{License and reuse}\\FastF1 software and documentation use the MIT License. That license does not automatically cover the underlying Formula One timing records.} \\
+\NFrule
+\NFtext{\textbf{Biggest limitation}\\Only one race is loaded, and the returned data are not saved as versioned files in the repository.} \\
+\NFRULE
+\NFtext{\footnotesize FastF1 version 3.8.3 is reported in the notebook output. See \texttt{DATASHEET.md} for full documentation.} \\
+\end{tabular}%
+}
+\caption{Nutrition-style summary of the FastF1 validation data used in this project.}
+\end{figure}
+\end{document}
+
