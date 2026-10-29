@@ -112,3 +112,90 @@ The notebook's saved output reports full-table shapes of 11,298 qualifying rows,
 #### FastF1
 
 [FastF1](https://docs.fastf1.dev/) is an unofficial Python package for Formula One timing and telemetry. We use it only to inspect the 2023 Bahrain race and to compare its 52 recorded pit-in laps with the 52 rows in the DHL mirror. The notebook reports 1,056 lap rows, 20 qualifying rows, and 161 weather rows. FastF1's software and documentation are MIT-licensed, but that license does not automatically grant rights to the underlying Formula One timing data. Its publisher-side transformations beyond documented fields are not fully described in our repository.
+
+## 2. Scope of the research questions
+
+Here, the **target population** is what we would like to make a claim about, the **access frame** is what the available sources let us reach, and the **sample** is what we actually analyze.
+
+| Research question | Target population | Access frame | Current sample | What is missing and what that limits |
+| --- | --- | --- | --- | --- |
+| Does having faster pit stops in a race or season relate to better finishing positions or more points? | All driver-race entries and teams in Formula One World Championship races | Pit stops listed by the DHL mirror plus race results available from the Kaggle/Ergast-derived tables | 52 DHL stops from 2023 Bahrain; 10 sampled result rows that are not yet joined to those stops | The two samples are not aligned or joined. We cannot yet estimate the relationship, and an observational join would show association rather than causation. |
+| Which teams improve their pit-stop times during a season, and do their standings change too? | All teams competing across complete Formula One seasons | DHL race tables available from 2018 onward and their season standings | One 2023 race table and the 10-row 2023 DHL team standings file saved in the repo | One race cannot measure improvement. Team rebranding and lineup changes also make comparisons across seasons difficult. |
+| Do pit-stop times differ by circuit or era? | All pit stops at all Formula One championship circuits and seasons | DHL mirror from 2018 onward; OpenF1 from 2023 onward | One circuit in the saved DHL sample; no saved OpenF1 response | Earlier eras, many circuits, and changes in timing definitions are missing. We cannot generalize beyond Bahrain 2023 from the committed file. |
+| How do weather and race interruptions relate to pit stops? | All Formula One race sessions and stops | OpenF1 weather, race-control, and pit endpoints from 2023 onward | Download code exists, but no API extract is saved | We cannot reproduce a numerical result until the responses are saved. Weather readings and race-control events also need a documented time- or lap-based alignment to stops. |
+
+The access frames are not probability samples. They are convenience records created for sports timing and awards. This means missing races or stops may be systematic rather than random.
+
+## 3. Codebook
+
+The codebook includes every raw or derived column currently used by [`eda.ipynb`](eda.ipynb) for pit-stop analysis and its supporting race-outcome plots. API ranges marked “depends on API run” cannot be calculated without saving the response.
+
+### DHL race and championship tables
+
+| Column | Type | Units | Meaning | Range or allowed values in saved sample | Missing-value coding | Origin |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Pos.` | integer | rank | Rank of the stop by stationary time, where 1 is fastest | 1–52 in Bahrain; 1–10 in standings | Empty cell becomes `NaN` | Raw DHL mirror; numeric conversion in `read_dhl` |
+| `Team` | string | none | Team name | 10 team names | Empty string/`NaN` | Raw DHL mirror |
+| `Driver` | string | none | Driver surname | 20 drivers in Bahrain | Empty string/`NaN` | Raw DHL mirror |
+| `Time (sec)` | float | seconds | Stationary pit-stop time | 2.22–42.57 | Empty or nonnumeric value becomes `NaN` | Raw DHL mirror; numeric conversion in `read_dhl` |
+| `Lap` | integer | lap number | Race lap associated with the stop; sprints excluded | 0–54; meaning of 0 is undocumented | Empty or nonnumeric value becomes `NaN` | Raw DHL mirror; numeric conversion in `read_dhl` |
+| `Points` | integer | DHL award points | Points assigned for the ranked stop or accumulated by a team | Race: 0, 1, 2, 4, 6, 8, 10, 12, 15, 18, 25; standings: 14–543 | Empty or nonnumeric value becomes `NaN` | Raw DHL mirror; numeric conversion in `read_dhl` |
+| `year` | integer | calendar year | Season parsed from folder name | 2018–2026 in download loop | None after a successful parse | Derived in `eda.ipynb` |
+| `round` | integer | race round | Leading number parsed from filename | Depends on downloaded file | None after a successful parse | Derived in `eda.ipynb` |
+| `file` | string | none | Source filename | Depends on downloaded file | None | Derived in `eda.ipynb` |
+
+### OpenF1 fields used
+
+| Column | Type | Units | Meaning | Range or allowed values | Missing-value coding | Origin |
+| --- | --- | --- | --- | --- | --- | --- |
+| `session_key` | integer | none | OpenF1 identifier for a session | Depends on API run | JSON `null` | OpenF1 `sessions`, `pit`, `weather`, and `race_control` |
+| `meeting_key` | integer | none | OpenF1 identifier for a race weekend | Depends on API run | JSON `null` | OpenF1 API |
+| `year` | integer | year | Season of the session | 2023–2026 in our query | JSON `null` | `sessions` |
+| `session_name` | string | none | Session name | Filtered to `Race` | JSON `null` | `sessions` |
+| `is_cancelled` | Boolean | none | Whether the session was cancelled | `True` or `False`; only `False` retained | JSON `null` | `sessions` |
+| `circuit_short_name` | string | none | Short circuit name | Depends on API run | JSON `null` | `sessions` |
+| `driver_number` | integer | car number | Driver's racing number for that season | Depends on API run | JSON `null` | `pit` |
+| `lap_number` | integer | lap number | Lap of the pit-lane visit or race-control event | 1 or greater when present | JSON `null` | `pit` and `race_control` |
+| `lane_duration` | float | seconds | Total time spent in the pit lane | Nonnegative; depends on API run | JSON `null` | `pit` |
+| `stop_duration` | float | seconds | Stationary time in the pit box | Available only from 2024 US GP onward | JSON `null` | `pit` |
+| `rainfall` | numeric/Boolean | indicator | Whether rain was recorded | 0/1 or false/true | JSON `null` | `weather` |
+| `track_temperature` | float | degrees Celsius | Track temperature at the reading time | Depends on API run | JSON `null` | `weather` |
+| `category` | string | none | Type of race-control event | Includes `SafetyCar` | JSON `null` | `race_control` |
+| `flag` | string | none | Flag named in a race-control record | Includes `RED` | JSON `null` | `race_control` |
+| `label` | string | none | Readable race label made from year and circuit | Example: `2023 Bahrain` | None if inputs exist | Derived in `eda.ipynb`: `year + circuit_short_name` |
+| `rain` | Boolean | none | Whether `rainfall` is greater than zero | `True` or `False` | Missing if `rainfall` is missing | Derived in `eda.ipynb` |
+
+### FastF1 validation fields used
+
+| Column | Type | Units | Meaning | Range or allowed values in the Bahrain run | Missing-value coding | Origin |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Driver` | string | none | Driver abbreviation | 20 drivers | `NaN` | FastF1 laps |
+| `Stint` | float | stint number | Sequential tyre stint | Positive numbers | `NaN` | FastF1 laps |
+| `LapNumber` | float | lap number | Driver's lap number | 1 through race distance | `NaN` | FastF1 laps |
+| `LapTime` | timedelta | time | Recorded lap duration | Timedelta values | `NaT`; saved notebook output reports 1 missing | FastF1 laps |
+| `LapTimeSeconds` | float | seconds | `LapTime` converted to seconds | Depends on valid lap times | `NaN` when `LapTime` is missing | Derived in `eda.ipynb` |
+| `PitInTime` | timedelta | session time | Time at which a lap enters the pits | Present on 52 laps | `NaT` on non-pit-in laps | FastF1 laps |
+| `PitOutTime` | timedelta | session time | Time at which a lap exits the pits | Present on 50 laps | `NaT` on non-pit-out laps | FastF1 laps |
+| `IsAccurate` | Boolean | none | FastF1 timing-quality flag | `True` or `False` | None reported | FastF1 laps |
+| `TrackStatus` | string | status code | Track condition code | Clean-lap filter keeps only `1` | Empty/`NaN` if absent | FastF1 laps |
+| `Compound` | string | none | Tyre compound | `SOFT`, `MEDIUM`, `HARD` in this race | `NaN` | FastF1 laps |
+| `TyreLife` | float | laps | Age of tyre set | 1–24 reported in `EDA.md` | `NaN` | FastF1 laps |
+| `Laps` | integer | laps | Count of rows in each driver/stint group | Positive integer | None after grouping | Derived `stint_lengths` table in `fastf1_exploration.ipynb` |
+
+### Race-results fields used
+
+| Column | Type | Units | Meaning | Range or values in saved sample | Missing-value coding | Origin |
+| --- | --- | --- | --- | --- | --- | --- |
+| `raceId` | integer | none | Race key | 18–19 across the samples | None | Kaggle/Ergast-derived files |
+| `driverId` | integer | none | Driver key | Integer IDs | None | Raw |
+| `constructorId` | integer | none | Team key | Integer IDs | None | Raw |
+| `position` in qualifying | integer | rank | Qualifying position | 1–10 | None | `qualifying.csv` |
+| `grid` | integer | rank | Starting-grid position | 1–18 | None in saved sample | `results.csv` |
+| `positionOrder` | integer | rank | Race finishing order including nonfinishers | 1–10 | None | `results.csv` |
+| `points` | float | championship points | Race or cumulative standings points | Results: 0–10; standings: 1–14 | None | Results/standings files |
+| `laps` | integer | laps | Race laps completed | 43–58 | None | `results.csv` |
+| `milliseconds` | string | milliseconds | Race time, with `\N` used upstream for missing | Mixed numeric text and `\N` | Literal `\N` | `results.csv` |
+| `milliseconds_numeric` | float | milliseconds | Numeric conversion of `milliseconds` | Valid numeric values or missing | `NaN` after coercion | Derived in `eda.ipynb` |
+| `fastestLapSpeed` | float | km/h | Average speed on the driver's fastest lap | 212.974–218.385 | Literal `\N` upstream / `NaN` after cleaning | `results.csv` |
+| `position` in standings | integer | rank | Driver championship position after the race | 1–8 | None | `driver_standings.csv` |
+| `position_change` | integer | places | Qualifying position minus finishing order; positive means places gained | -7 to 4 among six matched rows | Missing if no join match | Derived in `eda.ipynb` |
