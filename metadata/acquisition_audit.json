@@ -1,0 +1,67 @@
+{
+  "audited_at_utc": "2026-11-13T06:03:17.205372+00:00",
+  "passed": true,
+  "errors": [],
+  "warnings": [
+    "Kaggle/OpenF1 result row counts differ for 1 events",
+    "FastF1 selected exports cover only 3/70 events"
+  ],
+  "observations": [
+    "FastF1 transport cache and selected CSV exports have different roles; the cache is ignored and the CSVs are the stable analysis inputs.",
+    "OpenF1 has empty pit responses for 6 events."
+  ],
+  "coverage": {
+    "canonical_events": 70,
+    "dhl_events": 70,
+    "openf1_events": 70,
+    "fastf1_events": 3
+  },
+  "openf1": {
+    "empty_pit_events": [
+      "2023-01",
+      "2023-02",
+      "2023-03",
+      "2023-04",
+      "2023-05",
+      "2023-06"
+    ],
+    "duplicate_counts": {
+      "drivers_driver_number": 0,
+      "drivers_exact_rows": 0,
+      "pit_driver_lap": 0,
+      "pit_exact_rows": 0,
+      "race_control_exact_rows": 0,
+      "results_driver_number": 0,
+      "session_result_exact_rows": 0,
+      "weather_date": 0,
+      "weather_exact_rows": 0
+    },
+    "result_count_differences": [
+      {
+        "event_id": "2023-15",
+        "kaggle_results": 20,
+        "openf1_results": 19
+      }
+    ]
+  },
+  "fastf1": {
+    "complete_events": [
+      "2023-01",
+      "2023-10",
+      "2023-14"
+    ],
+    "incomplete_event_count": 67,
+    "pit_in_counts": {
+      "2023-01": 52,
+      "2023-10": 26,
+      "2023-14": 26
+    },
+    "duplicate_driver_lap_keys": 0,
+    "duplicate_result_driver_keys": 0
+  },
+  "redundancy": {
+    "duplicate_kaggle_directory_exists": false,
+    "per_event_openf1_session_files": [],
+    "duplicate_nonempty_openf1_file_groups": []
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "expected_openf1_missing_driver_keys": {
+    "2023-15:18": "Lance Stroll appears in the Kaggle Singapore 2023 results as withdrawn, but OpenF1 does not include car 18 in that race's drivers or session-result response."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "built_at_utc": "2026-11-13T06:11:30.313780+00:00",
+  "output_file": "data/interim/event_bridge.csv",
+  "review_file": "data/interim/event_bridge_review.csv",
+  "event_count": 70,
+  "availability": {
+    "kaggle": 70,
+    "dhl": 70,
+    "openf1": 70,
+    "fastf1": 3
+  },
+  "openf1_match_methods": {
+    "exact_date": 69,
+    "manual_override": 1
+  },
+  "manual_review_rows": 4,
+  "all_manual_reviews_approved": true,
+  "approved_name_disagreement_events": [
+    "2023-17",
+    "2024-23",
+    "2025-23"
+  ],
+  "unresolved_name_disagreement_events": [],
+  "chronology_mismatches": [],
+  "unique_keys": {
+    "event_id": true,
+    "raceId": true,
+    "openf1_session_key": true,
+    "openf1_meeting_key": true
+  },
+  "columns": [
+    "event_id",
+    "year",
+    "round",
+    "raceId",
+    "race_name",
+    "race_date",
+    "circuitId",
+    "circuit_ref",
+    "circuit_name",
+    "circuit_location",
+    "circuit_country",
+    "dhl_available",
+    "dhl_source_path",
+    "dhl_stop_rows",
+    "openf1_available",
+    "openf1_match_method",
+    "openf1_meeting_key",
+    "openf1_session_key",
+    "openf1_date_start_utc",
+    "openf1_circuit_key",
+    "openf1_circuit_name",
+    "openf1_location",
+    "openf1_country_code",
+    "openf1_country_name",
+    "fastf1_available",
+    "fastf1_event_name",
+    "fastf1_event_date",
+    "fastf1_location",
+    "fastf1_country",
+    "fastf1_source_directory"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "audited_at_utc": "2026-11-16T21:51:32.652245+00:00",
+  "dataset": "data/processed/pit_stops_2023_2025.csv",
+  "status": "PASS",
+  "rows": 2225,
+  "columns": 105,
+  "events": 70,
+  "checks_passed": 18,
+  "checks_total": 18,
+  "checks": {
+    "row_count_preserved": true,
+    "stop_id_unique": true,
+    "all_70_events_present": true,
+    "years_are_2023_to_2025": true,
+    "pit_bridge_keys_preserved": true,
+    "pit_bridge_values_preserved": true,
+    "identity_bridge_consistent": true,
+    "event_context_consistent": true,
+    "dhl_ranks_complete_within_event": true,
+    "primary_numeric_ranges_valid": true,
+    "all_race_results_joined": true,
+    "kaggle_duration_units_consistent": true,
+    "openf1_match_flags_consistent": true,
+    "fastf1_match_flags_consistent": true,
+    "no_duplicate_data_columns": true,
+    "no_nonfinite_numeric_values": true,
+    "source_missing_sentinels_normalized": true,
+    "raw_dhl_values_preserved": true
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "missing_dhl_points",
+      "count": 158,
+      "explanation": "The publisher left these award-points cells blank; they remain missing."
+    },
+    {
+      "code": "lap_zero",
+      "count": 3,
+      "explanation": "DHL supplied lap 0; its meaning is not reinterpreted."
+    },
+    {
+      "code": "no_exact_kaggle_stop",
+      "count": 6,
+      "explanation": "No record shared the exact event, driver, and lap key; no nearest-lap guess was made."
+    },
+    {
+      "code": "no_exact_openf1_stop",
+      "count": 175,
+      "explanation": "This includes races whose saved OpenF1 pit response is empty."
+    },
+    {
+      "code": "openf1_lane_duration_at_least_300_seconds",
+      "count": 1,
+      "explanation": "Retained and flagged as published; excluded from no rows automatically."
+    },
+    {
+      "code": "openf1_stop_duration_missing",
+      "count": 1376,
+      "explanation": "OpenF1 does not provide stationary stop_duration consistently across these years."
+    },
+    {
+      "code": "fastf1_lap_unavailable",
+      "count": 2126,
+      "explanation": "FastF1 raw sessions are saved for only three races."
+    },
+    {
+      "code": "race_grid_missing",
+      "count": 41,
+      "explanation": "The Kaggle results source codes these grid values as missing."
+    },
+    {
+      "code": "finish_position_missing",
+      "count": 92,
+      "explanation": "The Kaggle results source has no numeric classified position for these results."
+    }
+  ],
+  "match_counts": {
+    "kaggle_exact": 2219,
+    "openf1_exact": 2050,
+    "fastf1_lap_exact": 99
+  },
+  "year_rows": {
+    "2023": 765,
+    "2024": 739,
+    "2025": 721
+  }
+}

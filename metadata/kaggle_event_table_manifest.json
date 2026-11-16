@@ -1,0 +1,50 @@
+{
+  "built_at_utc": "2026-11-13T05:35:30.886173+00:00",
+  "years": [
+    2023,
+    2024,
+    2025
+  ],
+  "input_directory": "data",
+  "output_file": "data/interim/kaggle_events_2023_2025.csv",
+  "source_sha256": {
+    "races.csv": "cfe8bb2f79b62abe3af108473c963a4600fd71e3861ee1f9489d489a45d5064d",
+    "circuits.csv": "a43c986bf3f4b3856682e0f8d14bb2c07fab578ce670421c6b96507c151c9590",
+    "results.csv": "93377733d5519b49ca251a6b46c8c3f2f1661ef9d97cf91e65b6386a5ad5e36d",
+    "pit_stops.csv": "4f3ae87875b1f854ae7b9f6ca3f52d97e3fe39efd2adf3910eba45b0917e177a"
+  },
+  "event_count": 70,
+  "events_by_year": {
+    "2023": 22,
+    "2024": 24,
+    "2025": 24
+  },
+  "event_id_unique": true,
+  "raceId_unique": true,
+  "missing_circuit_joins": 0,
+  "events_missing_race_time": 0,
+  "events_without_results": [],
+  "events_without_kaggle_pit_stops": [],
+  "total_result_rows": 1398,
+  "total_kaggle_pit_stop_rows": 2558,
+  "columns": [
+    "event_id",
+    "raceId",
+    "year",
+    "round",
+    "race_name",
+    "race_date",
+    "race_time",
+    "race_url",
+    "circuitId",
+    "circuit_ref",
+    "circuit_name",
+    "circuit_location",
+    "circuit_country",
+    "circuit_latitude",
+    "circuit_longitude",
+    "circuit_altitude",
+    "result_rows",
+    "kaggle_pit_stop_rows"
+  ]
+}

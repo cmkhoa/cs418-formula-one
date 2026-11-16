@@ -1,0 +1,213 @@
+{
+  "input": "data/processed/pit_stops_2023_2025.csv",
+  "random_seed": 418,
+  "bootstrap_resamples": 20000,
+  "finding_1_points_and_fast_stops": {
+    "team_races": 692,
+    "events": 70,
+    "mean_points_fastest_stop_team": 20.285714285714285,
+    "mean_points_other_teams": 8.77491961414791,
+    "difference_points": 11.510794671566375,
+    "event_cluster_bootstrap_confidence_interval_95": [
+      8.081660542494152,
+      14.914062857142847
+    ],
+    "adjusted_full_sample_model": {
+      "rows": 682,
+      "best_stop_coefficient_points_per_second": -1.5101135071552807,
+      "confidence_interval_95": [
+        -2.201042033374533,
+        -0.8191849809360283
+      ],
+      "p_value": 1.837657916458194e-05,
+      "controls": "mean starting-grid position, event fixed effects, and team fixed effects"
+    },
+    "sensitivity_best_stop_at_most_4_seconds": {
+      "rows": 665,
+      "best_stop_coefficient_points_per_second": -1.9851502340230944,
+      "confidence_interval_95": [
+        -4.602107035238292,
+        0.6318065671921025
+      ],
+      "p_value": 0.13707454786899675,
+      "controls": "mean starting-grid position, event fixed effects, and team fixed effects"
+    }
+  },
+  "finding_2_change_over_time": {
+    "event_median_2023_seconds": 2.9475000000000002,
+    "event_median_2025_seconds": 2.7,
+    "change_2025_minus_2023_seconds": -0.24750000000000005,
+    "independent_event_bootstrap_confidence_interval_95": [
+      -0.44999999999999973,
+      -0.15250000000000075
+    ],
+    "continuous_teams": 8,
+    "continuous_teams_with_lower_2025_typical_stop": 7,
+    "largest_improvement_team": "Mercedes",
+    "largest_improvement_seconds": -0.4750000000000001,
+    "common_circuit_count": 22,
+    "common_circuit_median_change_seconds": -0.33000000000000007,
+    "common_circuit_bootstrap_confidence_interval_95": [
+      -0.3999999999999999,
+      -0.2124999999999999
+    ],
+    "mercedes_common_circuit_count": 22,
+    "mercedes_common_circuit_median_change_seconds": -0.4399999999999997,
+    "mercedes_common_circuit_bootstrap_confidence_interval_95": [
+      -0.7000000000000002,
+      -0.2999999999999998
+    ],
+    "team_year_typical_stop_seconds": [
+      {
+        "year": 2023,
+        "team": "Alpine F1 Team",
+        "seconds": 3.05
+      },
+      {
+        "year": 2023,
+        "team": "Aston Martin",
+        "seconds": 2.91
+      },
+      {
+        "year": 2023,
+        "team": "Ferrari",
+        "seconds": 2.6075
+      },
+      {
+        "year": 2023,
+        "team": "Haas F1 Team",
+        "seconds": 3.3875
+      },
+      {
+        "year": 2023,
+        "team": "McLaren",
+        "seconds": 2.8099999999999996
+      },
+      {
+        "year": 2023,
+        "team": "Mercedes",
+        "seconds": 3.0
+      },
+      {
+        "year": 2023,
+        "team": "Red Bull",
+        "seconds": 2.55
+      },
+      {
+        "year": 2023,
+        "team": "Williams",
+        "seconds": 3.2625
+      },
+      {
+        "year": 2024,
+        "team": "Alpine F1 Team",
+        "seconds": 2.7725
+      },
+      {
+        "year": 2024,
+        "team": "Aston Martin",
+        "seconds": 2.775
+      },
+      {
+        "year": 2024,
+        "team": "Ferrari",
+        "seconds": 2.485
+      },
+      {
+        "year": 2024,
+        "team": "Haas F1 Team",
+        "seconds": 3.1
+      },
+      {
+        "year": 2024,
+        "team": "McLaren",
+        "seconds": 2.6
+      },
+      {
+        "year": 2024,
+        "team": "Mercedes",
+        "seconds": 2.705
+      },
+      {
+        "year": 2024,
+        "team": "Red Bull",
+        "seconds": 2.5075000000000003
+      },
+      {
+        "year": 2024,
+        "team": "Williams",
+        "seconds": 3.1449999999999996
+      },
+      {
+        "year": 2025,
+        "team": "Alpine F1 Team",
+        "seconds": 2.9825
+      },
+      {
+        "year": 2025,
+        "team": "Aston Martin",
+        "seconds": 2.8200000000000003
+      },
+      {
+        "year": 2025,
+        "team": "Ferrari",
+        "seconds": 2.3775
+      },
+      {
+        "year": 2025,
+        "team": "Haas F1 Team",
+        "seconds": 2.965
+      },
+      {
+        "year": 2025,
+        "team": "McLaren",
+        "seconds": 2.7525000000000004
+      },
+      {
+        "year": 2025,
+        "team": "Mercedes",
+        "seconds": 2.525
+      },
+      {
+        "year": 2025,
+        "team": "Red Bull",
+        "seconds": 2.5949999999999998
+      },
+      {
+        "year": 2025,
+        "team": "Williams",
+        "seconds": 2.91
+      }
+    ]
+  },
+  "finding_3_rain": {
+    "dry_events": 54,
+    "rain_events": 16,
+    "dry_event_median_seconds": 2.8,
+    "rain_event_median_seconds": 2.8099999999999996,
+    "mann_whitney_u": 462.0,
+    "mann_whitney_p_value": 0.6798724340416049,
+    "year_adjusted_rain_difference_seconds": 0.007717491546265748,
+    "year_adjusted_confidence_interval_95": [
+      -0.08905673325446578,
+      0.10449171634699728
+    ],
+    "year_adjusted_p_value": 0.8757949750824365,
+    "circuits_observed_in_both_conditions": 11,
+    "mean_within_circuit_rain_difference_seconds": 0.1231818181818183,
+    "within_circuit_bootstrap_confidence_interval_95": [
+      -0.0325056818181818,
+      0.2893238636363633
+    ]
+  },
+  "analyses_not_used": {
+    "driver_level_outcome_model": "Left out because race outcomes repeat across a driver's multiple stops; the team-race aggregation answers the project question without pseudoreplication.",
+    "openf1_stationary_duration_comparison": "Left out because OpenF1 stop_duration is missing for 1,376 of 2,225 final rows.",
+    "fastf1_model": "Left out because saved FastF1 lap context covers only 99 stops in three races."
+  },
+  "figures": [
+    "figures/finding-points-by-pit-rank.png",
+    "figures/finding-team-improvement.png",
+    "figures/finding-rain.png"
+  ]
+}

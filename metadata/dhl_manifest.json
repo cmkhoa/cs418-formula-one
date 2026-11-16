@@ -1,0 +1,2005 @@
+{
+  "repository": "Jordan-Soria/PitStops",
+  "commit_sha": "b05c8eb3345f43703bca2bea9461a63108a8cadc",
+  "commit_date_utc": "2026-11-10T17:46:42Z",
+  "acquired_at_utc": "2026-11-13T05:28:20.071572+00:00",
+  "years": [
+    2023,
+    2024,
+    2025
+  ],
+  "raw_output_directory": "data/raw/dhl",
+  "race_file_count": 70,
+  "race_files_by_year": {
+    "2023": 22,
+    "2024": 24,
+    "2025": 24
+  },
+  "stop_rows": 2225,
+  "stop_rows_by_year": {
+    "2023": 765,
+    "2024": 739,
+    "2025": 721
+  },
+  "header_only_files": [],
+  "files_with_malformed_rows": [],
+  "files_missing_required_columns": [],
+  "missing_cells_by_column": {
+    "Pos.": 0,
+    "Team": 0,
+    "Driver": 0,
+    "Time (sec)": 0,
+    "Lap": 0,
+    "Points": 158
+  },
+  "invalid_nonempty_numeric_cells_by_column": {
+    "Pos.": 0,
+    "Time (sec)": 0,
+    "Lap": 0,
+    "Points": 0
+  },
+  "duplicate_driver_lap_rows": 0,
+  "skipped_non_race_csv_files": [],
+  "files": {
+    "2023/10uk.csv": {
+      "rows": 24,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 10,
+      "bytes": 904,
+      "sha256": "dff8c921828f41586dd1af46a83e5688abb4dcdae94a82611bc65bbc0003832f",
+      "source_path": "2023/10uk.csv"
+    },
+    "2023/11hun.csv": {
+      "rows": 36,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 11,
+      "bytes": 1337,
+      "sha256": "9d599a0d7ba0d5e188ce54755971e284a17dd004383d0772b7c7b5ca5fb706ca",
+      "source_path": "2023/11hun.csv"
+    },
+    "2023/12spa.csv": {
+      "rows": 37,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 12,
+      "bytes": 1355,
+      "sha256": "99ec814e6aaba6a90bd3d6a6d0f33fed709e12bb290a0cff19bde67be78d9974",
+      "source_path": "2023/12spa.csv"
+    },
+    "2023/13hol.csv": {
+      "rows": 71,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 13,
+      "bytes": 2556,
+      "sha256": "8d782387b2c7d3a9e093479809a88ce472f315d3573523a44a3f903090acf768",
+      "source_path": "2023/13hol.csv"
+    },
+    "2023/14monz.csv": {
+      "rows": 25,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 14,
+      "bytes": 921,
+      "sha256": "7858a26ccb6457dcdbb12971ba62be67841f944c840bc4a73fb24376d5130a4c",
+      "source_path": "2023/14monz.csv"
+    },
+    "2023/15sing.csv": {
+      "rows": 25,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 15,
+      "bytes": 926,
+      "sha256": "2f76d9c6215fb8b35795620b660b0fb903bb08b0ed5b317a5a3d5ed40583d19c",
+      "source_path": "2023/15sing.csv"
+    },
+    "2023/16jap.csv": {
+      "rows": 42,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 16,
+      "bytes": 1527,
+      "sha256": "00092add4febb10401423cb8175001f0d3492d8f770aeabacd61f2e16d4fd3e1",
+      "source_path": "2023/16jap.csv"
+    },
+    "2023/17qat.csv": {
+      "rows": 54,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 17,
+      "bytes": 1956,
+      "sha256": "747392955d7205ff75b8015f01fb1f0336331575779e08c3f093d5791d04fc0a",
+      "source_path": "2023/17qat.csv"
+    },
+    "2023/18amer.csv": {
+      "rows": 36,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 18,
+      "bytes": 1337,
+      "sha256": "e7a706f9176c06d1d4ef558df1b3a454e1bb5c40cb9d2066d1220870e70b1e65",
+      "source_path": "2023/18amer.csv"
+    },
+    "2023/19mex.csv": {
+      "rows": 20,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 19,
+      "bytes": 761,
+      "sha256": "694a3e6df5c08d964d81afff2719d058f27a2c9c142b0a432b46e319ba9fb47a",
+      "source_path": "2023/19mex.csv"
+    },
+    "2023/1bah.csv": {
+      "rows": 52,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 1,
+      "bytes": 1879,
+      "sha256": "124ad74171f9d966ebbafa200f87a6d372e6613380a2a4812e1cd33020d49b93",
+      "source_path": "2023/1bah.csv"
+    },
+    "2023/20bra.csv": {
+      "rows": 35,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 20,
+      "bytes": 1290,
+      "sha256": "6731291c483644c7f5ba861384a4c099e1d2781d05f4ae73b617512794128c3b",
+      "source_path": "2023/20bra.csv"
+    },
+    "2023/21veg.csv": {
+      "rows": 31,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 21,
+      "bytes": 1152,
+      "sha256": "93824776130a27ebb1b44412ff982c62dc1fbd0deca3e32657f56fb44492f7d1",
+      "source_path": "2023/21veg.csv"
+    },
+    "2023/22abu.csv": {
+      "rows": 37,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 22,
+      "bytes": 1359,
+      "sha256": "c8f98b3eef92c54e7b5ddb5a5f4af14f1ae066457ce92e2089bcf40dc826ccb4",
+      "source_path": "2023/22abu.csv"
+    },
+    "2023/2ara.csv": {
+      "rows": 24,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 2,
+      "bytes": 893,
+      "sha256": "572f0f51c4a4b267b7e604c83452a7ca44e0529fffc11112061a1e86a8addcd4",
+      "source_path": "2023/2ara.csv"
+    },
+    "2023/3aus.csv": {
+      "rows": 16,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 3,
+      "bytes": 598,
+      "sha256": "f1a04ecfa35052915ab5e71f026b35810a188483df6e2b97fc871002bb36a87c",
+      "source_path": "2023/3aus.csv"
+    },
+    "2023/4bak.csv": {
+      "rows": 23,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 4,
+      "bytes": 848,
+      "sha256": "1454dd8de0f47084621aa9f7390d36f47ca3b59097eacd7901e23747c3b300f9",
+      "source_path": "2023/4bak.csv"
+    },
+    "2023/5mia.csv": {
+      "rows": 20,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 5,
+      "bytes": 750,
+      "sha256": "f1db4838927cfc758a7705576176f6fbffc85428ebce226fd12e6db0eb7d99e6",
+      "source_path": "2023/5mia.csv"
+    },
+    "2023/6mon.csv": {
+      "rows": 37,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 6,
+      "bytes": 1344,
+      "sha256": "3d60dc662b1323d62ef9144b405b28bc22460e99c7c94f87565b139c02539ac4",
+      "source_path": "2023/6mon.csv"
+    },
+    "2023/7esp.csv": {
+      "rows": 43,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 7,
+      "bytes": 1564,
+      "sha256": "787d5acdced5ab21c93dd7ca59494f7cddde5e35f7e03aa7bae960635948973c",
+      "source_path": "2023/7esp.csv"
+    },
+    "2023/8can.csv": {
+      "rows": 33,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 8,
+      "bytes": 1216,
+      "sha256": "117e3c4b46dc721c7d9ad77e2288631a6b52fbe307a9a3cdf2ee2c0a0da37295",
+      "source_path": "2023/8can.csv"
+    },
+    "2023/9aust.csv": {
+      "rows": 44,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2023,
+      "round": 9,
+      "bytes": 1615,
+      "sha256": "05aae5d4c99a9f7e76969ff4e31ab289da3aed29d68ab3cf0554ac506ce30508",
+      "source_path": "2023/9aust.csv"
+    },
+    "2024/10esp.csv": {
+      "rows": 42,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 10,
+      "bytes": 1481,
+      "sha256": "7ad2853cc80400ce1c4daabfd5199cc3f6a402ff8e50e3beedcc6791ead84316",
+      "source_path": "2024/10esp.csv"
+    },
+    "2024/11aust.csv": {
+      "rows": 45,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 11,
+      "bytes": 1605,
+      "sha256": "9c0293f8fe6fdb4cbba36b0d57cd3fa0d8df91334e35664270071b25f74af7a6",
+      "source_path": "2024/11aust.csv"
+    },
+    "2024/12uk.csv": {
+      "rows": 45,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 12,
+      "bytes": 1579,
+      "sha256": "450a09431ddb1e4986370fef4bceba998638bca14b34313b7dc38b43ce95dd78",
+      "source_path": "2024/12uk.csv"
+    },
+    "2024/13hun.csv": {
+      "rows": 40,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 13,
+      "bytes": 1417,
+      "sha256": "acc10be9a84eed65cc65c69b0dd0bf84f3e2d39ddb398f5c9fc1ffdeeaefd4c8",
+      "source_path": "2024/13hun.csv"
+    },
+    "2024/14spa.csv": {
+      "rows": 34,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 14,
+      "bytes": 1208,
+      "sha256": "12e8731f53bc5d011a18e78a51035f4ba3dc0c0c22336d5cc92fcb4e832292d4",
+      "source_path": "2024/14spa.csv"
+    },
+    "2024/15hol.csv": {
+      "rows": 26,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 15,
+      "bytes": 930,
+      "sha256": "5cac97642b4f31f6fa3ee2b76906a9930ae7943c85d4c11a69e9ef0117d19465",
+      "source_path": "2024/15hol.csv"
+    },
+    "2024/16mon.csv": {
+      "rows": 30,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 16,
+      "bytes": 1101,
+      "sha256": "4b6bbd0d9492ff53be2102bc703752e76db5f2bb8f97a6c054bd7db434a66324",
+      "source_path": "2024/16mon.csv"
+    },
+    "2024/17bak.csv": {
+      "rows": 22,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 17,
+      "bytes": 805,
+      "sha256": "7d3e852379098f55b7d1b5fd70c6f2d0b19a8eafbf649b69ba12e9bb268830ec",
+      "source_path": "2024/17bak.csv"
+    },
+    "2024/18sing.csv": {
+      "rows": 23,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 18,
+      "bytes": 828,
+      "sha256": "34d923287fef18172d6b8c32d9c4972be95b9527013db48b8ad2331492e4b4c8",
+      "source_path": "2024/18sing.csv"
+    },
+    "2024/19ame.csv": {
+      "rows": 23,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 19,
+      "bytes": 820,
+      "sha256": "a4807dad3aa06ee6abc14198b82d7cb81cb81187a794443e4efd63249a961478",
+      "source_path": "2024/19ame.csv"
+    },
+    "2024/1bah.csv": {
+      "rows": 43,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 33
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 1,
+      "bytes": 1268,
+      "sha256": "b0e93055e5e82002b09fbd9e1d6410c54e124e2a4398452ff832f51e16b4de79",
+      "source_path": "2024/1bah.csv"
+    },
+    "2024/20mex.csv": {
+      "rows": 21,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 20,
+      "bytes": 758,
+      "sha256": "da215026f17a7bd91b165457528f0cfb966a3aa763ceb127eb61714790c2cf41",
+      "source_path": "2024/20mex.csv"
+    },
+    "2024/21bra.csv": {
+      "rows": 18,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 21,
+      "bytes": 658,
+      "sha256": "1d05f60a4917745e0c75e13c8906268872a3aab6a7f82215d728c0114834f2d4",
+      "source_path": "2024/21bra.csv"
+    },
+    "2024/22veg.csv": {
+      "rows": 38,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 22,
+      "bytes": 1345,
+      "sha256": "36a3fc5672bf1708fc471ecdca91a81103c9ac331609a64c46ce2d658eeebe7d",
+      "source_path": "2024/22veg.csv"
+    },
+    "2024/23qat.csv": {
+      "rows": 27,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 23,
+      "bytes": 969,
+      "sha256": "6a42831c306cac103c4c4582361621c5fde95952d52264c0d6cb5d2f41373801",
+      "source_path": "2024/23qat.csv"
+    },
+    "2024/24abu.csv": {
+      "rows": 28,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 24,
+      "bytes": 1000,
+      "sha256": "12297bdeb17879f9c604e927aa2de74581b5c7e907778d575f765e6af2ba34f7",
+      "source_path": "2024/24abu.csv"
+    },
+    "2024/2ara.csv": {
+      "rows": 19,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 9
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 2,
+      "bytes": 573,
+      "sha256": "82fbbfdcb4d5d618dac327df9bd875a6990b4c516f1780a5a2fb903bdf9c0512",
+      "source_path": "2024/2ara.csv"
+    },
+    "2024/3aus.csv": {
+      "rows": 36,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 26
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 3,
+      "bytes": 1036,
+      "sha256": "9b0c9214b339b955c47971e743d8bbf54d71c345af43b4038cd690acca6687d6",
+      "source_path": "2024/3aus.csv"
+    },
+    "2024/4jap.csv": {
+      "rows": 36,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 26
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 4,
+      "bytes": 1080,
+      "sha256": "b3e2d7e5a4c3866bb26afe1610ae093ab966673098d41153aa1fc9fd969b1fbb",
+      "source_path": "2024/4jap.csv"
+    },
+    "2024/5chi.csv": {
+      "rows": 39,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 29
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 5,
+      "bytes": 1148,
+      "sha256": "b7f57ec79c00bbb4bdfaee4f2f29a1bba945f87517b659bda5c5d2d3c6cc61a2",
+      "source_path": "2024/5chi.csv"
+    },
+    "2024/6mia.csv": {
+      "rows": 28,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 18
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 6,
+      "bytes": 842,
+      "sha256": "c0da9bd20f09fad47c64bc8dde23f510918a251dce31328316296cfe0db1a5f9",
+      "source_path": "2024/6mia.csv"
+    },
+    "2024/7emi.csv": {
+      "rows": 27,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 17
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 7,
+      "bytes": 817,
+      "sha256": "a8219d3cfe5cfde641dbbe009d813b67055b3f2b4ad743fa0d6e21c3fcd5eb3f",
+      "source_path": "2024/7emi.csv"
+    },
+    "2024/8mon.csv": {
+      "rows": 7,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 8,
+      "bytes": 296,
+      "sha256": "7a610b312d9030fbb0d95237e2d3d3aedf20c29030e0459f80952432d0e8e121",
+      "source_path": "2024/8mon.csv"
+    },
+    "2024/9can.csv": {
+      "rows": 42,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2024,
+      "round": 9,
+      "bytes": 1495,
+      "sha256": "bdea27abd1f9794a2dbcc1a5f7296670262f4d2fba64d0928b411aea8dd5a4f8",
+      "source_path": "2024/9can.csv"
+    },
+    "2025/10can.csv": {
+      "rows": 33,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 10,
+      "bytes": 1231,
+      "sha256": "dea534052baa597d1ba0ebbaf1ae53364976bc49adc70e4517bbafac48ce26c2",
+      "source_path": "2025/10can.csv"
+    },
+    "2025/11austria.csv": {
+      "rows": 32,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 11,
+      "bytes": 1172,
+      "sha256": "af1088829baafb25fe55308c71148b0618ce7a65d11c146af6920096b86db19a",
+      "source_path": "2025/11austria.csv"
+    },
+    "2025/12uk.csv": {
+      "rows": 34,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 12,
+      "bytes": 1246,
+      "sha256": "ef4606ebd6f2dd0f93a3f6570161dabadcc5e54910759515fbaa667ac8cc357c",
+      "source_path": "2025/12uk.csv"
+    },
+    "2025/13bel.csv": {
+      "rows": 26,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 13,
+      "bytes": 977,
+      "sha256": "850b1e77e286a0dd40a36779b768ac784774dd61a43d6be38cc7e2e661c574f9",
+      "source_path": "2025/13bel.csv"
+    },
+    "2025/14hung.csv": {
+      "rows": 29,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 14,
+      "bytes": 1076,
+      "sha256": "61042956310602c1198b52bfb6f7c4d8fad0534acdede46541bafcea7a37faf2",
+      "source_path": "2025/14hung.csv"
+    },
+    "2025/15zand.csv": {
+      "rows": 40,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 15,
+      "bytes": 1486,
+      "sha256": "87859b9dacc80d035530fd52fc36e88feea8eb2ab4491a71a54b4368d7e8f9e2",
+      "source_path": "2025/15zand.csv"
+    },
+    "2025/16monza.csv": {
+      "rows": 19,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 16,
+      "bytes": 717,
+      "sha256": "73a45efbf235d632a045276c90d04cb51a18ae4c67f0faf55bb87caeec551dd3",
+      "source_path": "2025/16monza.csv"
+    },
+    "2025/17baku.csv": {
+      "rows": 21,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 17,
+      "bytes": 779,
+      "sha256": "7b18715706382bc309c75b8588e4d246aeaf3714a8e39bc6b30af36b8452c98b",
+      "source_path": "2025/17baku.csv"
+    },
+    "2025/18sing.csv": {
+      "rows": 23,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 18,
+      "bytes": 861,
+      "sha256": "c2a7eae9f33c421eb54377319be192b555c8b7c0d95e213e18b5eeaa6b0a5cc4",
+      "source_path": "2025/18sing.csv"
+    },
+    "2025/19ame.csv": {
+      "rows": 21,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 19,
+      "bytes": 789,
+      "sha256": "77549f5b046517beac327eca8875baa63c8a8ddd35fa295f38deec649563140c",
+      "source_path": "2025/19ame.csv"
+    },
+    "2025/1aus.csv": {
+      "rows": 34,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 1,
+      "bytes": 1231,
+      "sha256": "0b4a7724c7a1a13e3c2130b5ebda8969ddaaf61aef6422f34d50df3ec1242ec7",
+      "source_path": "2025/1aus.csv"
+    },
+    "2025/20mex.csv": {
+      "rows": 26,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 20,
+      "bytes": 969,
+      "sha256": "c30cdf35d99978f2a147378a53bb1709e5637068705e16205228bc9cf55715b8",
+      "source_path": "2025/20mex.csv"
+    },
+    "2025/21bra.csv": {
+      "rows": 37,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 21,
+      "bytes": 1362,
+      "sha256": "12aff5335a72f6b5384476feb321389c6ada3f3c5a704bc68f56fc04da6f6521",
+      "source_path": "2025/21bra.csv"
+    },
+    "2025/22veg.csv": {
+      "rows": 23,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 22,
+      "bytes": 856,
+      "sha256": "451278beedcfb55341bbd4ea7d23d1c75444896e2c259e4fec1bd4cc956b84c3",
+      "source_path": "2025/22veg.csv"
+    },
+    "2025/23qat.csv": {
+      "rows": 41,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 23,
+      "bytes": 1479,
+      "sha256": "15568e4f3e4498346c48a162498cb90452f14efdef76d814a1b5f248a25c7604",
+      "source_path": "2025/23qat.csv"
+    },
+    "2025/24abu.csv": {
+      "rows": 27,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 24,
+      "bytes": 995,
+      "sha256": "d6ff90ab00260cd0b15f66504c5c0aa6b3d2f11dabf26c7f7c5ea4656541293f",
+      "source_path": "2025/24abu.csv"
+    },
+    "2025/2chi.csv": {
+      "rows": 25,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 2,
+      "bytes": 938,
+      "sha256": "8cf3d23abb2ff9e6bb9fa05e05a592c02c3c9b3dab91a98951bdef707b0c3ae3",
+      "source_path": "2025/2chi.csv"
+    },
+    "2025/3jap.csv": {
+      "rows": 21,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 3,
+      "bytes": 789,
+      "sha256": "20a5371cd2fe9bce1d5bf5073688dc7b18088c38e7108240a8a2dddf08eeb7de",
+      "source_path": "2025/3jap.csv"
+    },
+    "2025/4bah.csv": {
+      "rows": 42,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 4,
+      "bytes": 1532,
+      "sha256": "5ed47f5d2abec48885b0c5c6966e6878c47d8863d58a7e09c3c40582f39237c5",
+      "source_path": "2025/4bah.csv"
+    },
+    "2025/5ara.csv": {
+      "rows": 19,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 5,
+      "bytes": 713,
+      "sha256": "c42a3e288ba7acca7117fb9e5448c681c47aea27ee8cdd9ea8a5f4477672a3d2",
+      "source_path": "2025/5ara.csv"
+    },
+    "2025/6mia.csv": {
+      "rows": 18,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 6,
+      "bytes": 686,
+      "sha256": "70a51fb70c53321108ae5bce82263fd81801948b0997d1109c5ac428c67748b8",
+      "source_path": "2025/6mia.csv"
+    },
+    "2025/7emi.csv": {
+      "rows": 37,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 7,
+      "bytes": 1364,
+      "sha256": "98df2141029a6e9c3fc520338f5f86eeab9b216bd860b7c17a03e688b516620f",
+      "source_path": "2025/7emi.csv"
+    },
+    "2025/8mon.csv": {
+      "rows": 39,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 8,
+      "bytes": 1432,
+      "sha256": "d7018e42ff3931600174b59abe62132fb57f117cd0cf51841df3e48dbc9b35df",
+      "source_path": "2025/8mon.csv"
+    },
+    "2025/9spa.csv": {
+      "rows": 54,
+      "columns": [
+        "Pos.",
+        "Team",
+        "Driver",
+        "Time (sec)",
+        "Lap",
+        "Points"
+      ],
+      "column_count": 6,
+      "header_only": false,
+      "malformed_line_numbers": [],
+      "missing_by_column": {
+        "Pos.": 0,
+        "Team": 0,
+        "Driver": 0,
+        "Time (sec)": 0,
+        "Lap": 0,
+        "Points": 0
+      },
+      "missing_required_columns": [],
+      "year": 2025,
+      "round": 9,
+      "bytes": 1964,
+      "sha256": "b160c8546e85d78849f4848129262e18b627b64d1a3567436317e40e2754cdfa",
+      "source_path": "2025/9spa.csv"
+    }
+  }
+}

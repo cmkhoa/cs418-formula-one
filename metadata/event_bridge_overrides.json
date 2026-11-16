@@ -1,0 +1,13 @@
+{
+  "openf1_session_overrides": {
+    "9644": {
+      "event_id": "2024-22",
+      "reason": "Kaggle records the 2024 Las Vegas Grand Prix on its local date, 2024-11-23. OpenF1 records the race start in UTC as 2024-11-24T06:00:00+00:00. The race name, year, and Las Vegas location agree."
+    }
+  },
+  "approved_name_differences": {
+    "2023-17": "Kaggle uses Losail International Circuit in Al Daayen; OpenF1 uses Lusail. The Qatar country, race date, and chronological round agree.",
+    "2024-23": "Kaggle uses Losail International Circuit in Al Daayen; OpenF1 uses Lusail. The Qatar country, race date, and chronological round agree.",
+    "2025-23": "Kaggle uses Losail International Circuit in Al Daayen; OpenF1 uses Lusail. The Qatar country, race date, and chronological round agree."
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "dataset_handle": "jtrotman/formula-1-race-data",
+  "kaggle_version": "131",
+  "acquired_at_utc": "2026-11-13T05:31:40.476337+00:00",
+  "source_mode": "local_directory",
+  "raw_output_directory": "data",
+  "expected_table_count": 14,
+  "actual_table_count": 14,
+  "race_coverage": {
+    "minimum_year": 1950,
+    "maximum_year": 2026,
+    "race_count": 1172,
+    "races_by_year_2023_2025": {
+      "2023": 22,
+      "2024": 24,
+      "2025": 24
+    },
+    "year_round_key_unique": true
+  },
+  "files": {
+    "circuits.csv": {
+      "rows": 78,
+      "columns": [
+        "circuitId",
+        "circuitRef",
+        "name",
+        "location",
+        "country",
+        "lat",
+        "lng",
+        "alt",
+        "url"
+      ],
+      "column_count": 9,
+      "bytes": 10206,
+      "sha256": "a43c986bf3f4b3856682e0f8d14bb2c07fab578ce670421c6b96507c151c9590"
+    },
+    "constructor_results.csv": {
+      "rows": 13030,
+      "columns": [
+        "constructorResultsId",
+        "raceId",
+        "constructorId",
+        "points",
+        "status"
+      ],
+      "column_count": 5,
+      "bytes": 227249,
+      "sha256": "faf799e73819c9c3bacaa80a6674df5a186bdc0a9cef4f0ceb64677e94f26550"
+    },
+    "constructor_standings.csv": {
+      "rows": 13796,
+      "columns": [
+        "constructorStandingsId",
+        "raceId",
+        "constructorId",
+        "points",
+        "position",
+        "positionText",
+        "wins"
+      ],
+      "column_count": 7,
+      "bytes": 299987,
+      "sha256": "dd55b0537feddfbadc58fcc3f1ab6f2abfd4cb6cc3d3fe3ebdf72ad8af434767"
+    },
+    "constructors.csv": {
+      "rows": 214,
+      "columns": [
+        "constructorId",
+        "constructorRef",
+        "name",
+        "nationality",
+        "url"
+      ],
+      "column_count": 5,
+      "bytes": 17648,
+      "sha256": "a80601ac9f6961221527682452aa99c3075e8bddf5bb12e1eca95052aee52600"
+    },
+    "driver_standings.csv": {
+      "rows": 35695,
+      "columns": [
+        "driverStandingsId",
+        "raceId",
+        "driverId",
+        "points",
+        "position",
+        "positionText",
+        "wins"
+      ],
+      "column_count": 7,
+      "bytes": 834676,
+      "sha256": "3e3519107e070560da7e89562ffe3b67a2b2cb8cfc60da75a752f7d05c208f88"
+    },
+    "drivers.csv": {
+      "rows": 865,
+      "columns": [
+        "driverId",
+        "driverRef",
+        "number",
+        "code",
+        "forename",
+        "surname",
+        "dob",
+        "nationality",
+        "url"
+      ],
+      "column_count": 9,
+      "bytes": 94840,
+      "sha256": "d0a061348fc6874762691c0839db0a55102d3b5120d0f0cb39e74cd4635308f8"
+    },
+    "lap_times.csv": {
+      "rows": 883003,
+      "columns": [
+        "raceId",
+        "driverId",
+        "lap",
+        "position",
+        "time",
+        "milliseconds"
+      ],
+      "column_count": 6,
+      "bytes": 24786643,
+      "sha256": "cb3aa4c8f8f096fa86c78ab4a24651eb751f9b2dfb70492550a977669c4fd091"
+    },
+    "pit_stops.csv": {
+      "rows": 22704,
+      "columns": [
+        "raceId",
+        "driverId",
+        "stop",
+        "lap",
+        "time",
+        "duration",
+        "milliseconds"
+      ],
+      "column_count": 7,
+      "bytes": 780076,
+      "sha256": "4f3ae87875b1f854ae7b9f6ca3f52d97e3fe39efd2adf3910eba45b0917e177a"
+    },
+    "qualifying.csv": {
+      "rows": 11298,
+      "columns": [
+        "qualifyId",
+        "raceId",
+        "driverId",
+        "constructorId",
+        "number",
+        "position",
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "column_count": 9,
+      "bytes": 462252,
+      "sha256": "3174bebdae5ea15a3021bb43258efae575ddf653d8c39a845385d48adc6a6443"
+    },
+    "races.csv": {
+      "rows": 1172,
+      "columns": [
+        "raceId",
+        "year",
+        "round",
+        "circuitId",
+        "name",
+        "date",
+        "time",
+        "url",
+        "fp1_date",
+        "fp1_time",
+        "fp2_date",
+        "fp2_time",
+        "fp3_date",
+        "fp3_time",
+        "quali_date",
+        "quali_time",
+        "sprint_date",
+        "sprint_time"
+      ],
+      "column_count": 18,
+      "bytes": 173359,
+      "sha256": "cfe8bb2f79b62abe3af108473c963a4600fd71e3861ee1f9489d489a45d5064d"
+    },
+    "results.csv": {
+      "rows": 27568,
+      "columns": [
+        "resultId",
+        "raceId",
+        "driverId",
+        "constructorId",
+        "number",
+        "grid",
+        "position",
+        "positionText",
+        "positionOrder",
+        "points",
+        "laps",
+        "time",
+        "milliseconds",
+        "fastestLap",
+        "rank",
+        "fastestLapTime",
+        "fastestLapSpeed",
+        "statusId"
+      ],
+      "column_count": 18,
+      "bytes": 1671559,
+      "sha256": "93377733d5519b49ca251a6b46c8c3f2f1661ef9d97cf91e65b6386a5ad5e36d"
+    },
+    "seasons.csv": {
+      "rows": 77,
+      "columns": [
+        "year",
+        "url"
+      ],
+      "column_count": 2,
+      "bytes": 4740,
+      "sha256": "4dbb8bdffe6d8361334993586e55e4380e1f49eda18d0ff4ca71c8e867b0f1a6"
+    },
+    "sprint_results.csv": {
+      "rows": 590,
+      "columns": [
+        "resultId",
+        "raceId",
+        "driverId",
+        "constructorId",
+        "number",
+        "grid",
+        "position",
+        "positionText",
+        "positionOrder",
+        "points",
+        "laps",
+        "time",
+        "milliseconds",
+        "fastestLap",
+        "fastestLapTime",
+        "statusId",
+        "rank"
+      ],
+      "column_count": 17,
+      "bytes": 38710,
+      "sha256": "c85cd185762d52e3aeb6d560d2888640cce6b681bdd3231f2fb86f7aacce8fd4"
+    },
+    "status.csv": {
+      "rows": 141,
+      "columns": [
+        "statusId",
+        "status"
+      ],
+      "column_count": 2,
+      "bytes": 2172,
+      "sha256": "6651b8a26b6efd60fde9f7d6a2dd8523c80910918c5e9fe97a9c3136ef5fba2d"
+    }
+  }
+}
